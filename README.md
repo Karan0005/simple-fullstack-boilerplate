@@ -59,7 +59,7 @@ Clone the repository and install dependencies:
 ```bash
 # Clone the repository
 git clone https://github.com/Karan0005/simple-fullstack-app.git
-cd your-repository
+cd simple-fullstack-app
 
 # Install dependencies
 npm install
