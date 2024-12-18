@@ -58,8 +58,8 @@ Clone the repository and install dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Karan0005/simple-fullstack-app.git
-cd simple-fullstack-app
+git clone https://github.com/Karan0005/simple-fullstack-boilerplate.git
+cd simple-fullstack-boilerplate
 
 # Install dependencies
 npm install
@@ -68,7 +68,7 @@ npm install
 ## Repository Structure
 
 ```sh
-└── simple-fullstack-app/
+└── simple-fullstack-boilerplate/
     ├── LICENSE
     ├── README.md
     ├── apps
@@ -224,7 +224,7 @@ Contributions are welcome! Here are several ways you can contribute:
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
 
     ```sh
-    git clone https://github.com/Karan0005/simple-fullstack-app.git
+    git clone https://github.com/Karan0005/simple-fullstack-boilerplate.git
     ```
 
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
@@ -253,8 +253,8 @@ Contributions are welcome! Here are several ways you can contribute:
 8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch.
    Congratulations on your contribution!
 
--   **[Report Issues](https://github.com/Karan0005/simple-fullstack-app/issues)**: Submit bugs found
-    or log feature requests for the `simple-fullstack-app` project.
+-   **[Report Issues](https://github.com/Karan0005/simple-fullstack-boilerplate/issues)**: Submit
+    bugs found or log feature requests for the `simple-fullstack-boilerplate` project.
 
 ## License
 
