@@ -1,8 +1,13 @@
-import { Body, Controller, Post, Res, UnauthorizedException } from '@nestjs/common';
+import { Body, Controller, Post, Res } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Response } from 'express';
-import { BaseMessage, CryptoFactory, EnvironmentEnum } from '../../../utilities';
+import {
+    BaseMessage,
+    ControllerExceptionProcessor,
+    CryptoFactory,
+    EnvironmentEnum
+} from '../../../utilities';
 import { LoginDTO } from '../dto';
 import { IGetUserProfileResponse } from '../interfaces';
 import { LoginService } from '../services';
@@ -49,7 +54,7 @@ export class LoginController {
 
             return loginResponse.userProfile;
         } catch (error) {
-            throw new UnauthorizedException(error.message);
+            throw ControllerExceptionProcessor(error);
         }
     }
 }

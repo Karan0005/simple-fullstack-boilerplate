@@ -1,8 +1,8 @@
-import { Controller, Post, Res, UnauthorizedException, UseGuards } from '@nestjs/common';
+import { Controller, Post, Res, UseGuards } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Response } from 'express';
-import { BaseMessage, EnvironmentEnum } from '../../../utilities';
+import { BaseMessage, ControllerExceptionProcessor, EnvironmentEnum } from '../../../utilities';
 import { AuthenticationGuard } from '../../shared/services';
 import { LogoutResponse } from '../swagger';
 
@@ -28,7 +28,7 @@ export class LogoutController {
                 path: '/'
             });
         } catch (error) {
-            throw new UnauthorizedException(error.message);
+            throw ControllerExceptionProcessor(error);
         }
     }
 }

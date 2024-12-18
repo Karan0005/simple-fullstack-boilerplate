@@ -1,6 +1,6 @@
-import { Controller, Get, Req, UnauthorizedException, UseGuards } from '@nestjs/common';
+import { Controller, Get, Req, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { BaseMessage, IRequestContext } from '../../../utilities';
+import { BaseMessage, ControllerExceptionProcessor, IRequestContext } from '../../../utilities';
 import { AuthenticationGuard } from '../../shared/services';
 import { IGetUserProfileResponse } from '../interfaces';
 import { ProfileService } from '../services';
@@ -24,7 +24,7 @@ export class ProfileController {
         try {
             return await this.profileService.getProfile(request.user.userId);
         } catch (error) {
-            throw new UnauthorizedException(error.message);
+            throw ControllerExceptionProcessor(error);
         }
     }
 }
