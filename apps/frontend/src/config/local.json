@@ -1,0 +1,5 @@
+{
+    "appName": "Full Stack App (Local)",
+    "apiUrl": "http://localhost:8000/api",
+    "debugMode": true
+}

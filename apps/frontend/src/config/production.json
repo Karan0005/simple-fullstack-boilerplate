@@ -1,0 +1,5 @@
+{
+    "appName": "Full Stack App (Production)",
+    "apiUrl": "https://api.fullstack.io/api",
+    "debugMode": true
+}
