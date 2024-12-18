@@ -69,8 +69,6 @@ npm install
 
 ```sh
 └── simple-fullstack-app/
-    ├── .github
-    │   └── workflows
     ├── LICENSE
     ├── README.md
     ├── apps
